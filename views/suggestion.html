@@ -1,12 +1,14 @@
-<h1>{{ post.title }}</h1>
-
+<div class="thin-text">
+	<h1>{{ post.title }}</h1>
+</div>
 <div ng-repeat="comment in post.comments">
 	<p>{{ comment.body }}</p>
 	<p>
-    <span class="glyphicon glyphicon-plus-sign" ng-click="upVote(comment)"></span>
-    <span class="glyphicon glyphicon-minus-sign" ng-click="downVote(comment)"></span>
+		<span class="glyphicon glyphicon-minus-sign" ng-click="downVote(comment)"></span>
+		<span class="glyphicon glyphicon-plus-sign" ng-click="upVote(comment)"></span>
     <span class="pipe">|</span>
-    Upvotes: {{ comment.upvotes }}
+    Votes: {{ comment.upvotes }}
+		<hr />
 	</p>
 </div>
 
